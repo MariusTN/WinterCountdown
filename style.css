@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+:root {
+    --principal-color: rgb(49, 49, 190);
+    --secondary-color: rgb(69, 112, 150);
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(./bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    padding-bottom: 80px;
+}
+
+.container .content {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container .content .title {
+    font-size: 55px;
+    color: var(--principal-color);
+}
+
+.container .content .description {
+    font-size: 18px;
+    color: var(--principal-color);
+    padding: 10px 0;
+    max-width: 600px;
+}
+
+.container .content .count-down {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container .content .count-down .box h3 {
+    font-size: 50px;
+    background-color: var(--principal-color);
+    width: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.container .content .count-down .box p {
+    font-size: 20pxpx;
+    color: var(--secondary-color)
+}
+
+.container .content .btn {
+    display: inline-block;
+    padding: 9px 40px;
+    color: #fff;
+    background-color: var(--principal-color);
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: 0.5s linear;
+}
+
+.container .content .btn:hover {
+    transform: scale(1.1);
+}
+
+.container span {
+    position: absolute;
+    top: 0;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    filter: blur(2px);
+    animation: snowFall 5s linear infinite;
+}
+
+@keyframes snowFall {
+    from {
+        transform: translateY(-5vh);
+    }
+
+    to {
+        transform: translateY(260vh);
+        scale: .4;
+    }
+}
